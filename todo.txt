@@ -1,0 +1,5 @@
+- use two overlap function to delete the respective moneybag/coin
+- sounds effects
+- collected coins display
+- coins give 1 and bags give 100
+- maybe gameover
