@@ -139,6 +139,7 @@ function draw() {
   spawnFlyingMonsters();
 
   if(plr.y>800){
+    plr.remove();
     gameOver();
   }
 
