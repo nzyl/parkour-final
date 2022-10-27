@@ -106,7 +106,7 @@ function setup() {
 
   setTimeout(() => {
     iGround.remove();
-  }, 20000);
+  }, 16000);
   setTimeout(() => {
     gameState="play";
   }, 15000);
@@ -166,9 +166,10 @@ function draw() {
   fill("lime");
   strokeWeight(3);
   stroke("red");
-  textSize("cyan");
   text("Hop on the platform as soon ", width/2,height/2-100);
-  text("as you can reach it to avoid the down fall", width/2,height/2-20);
+  text("as you can reach it to avoid the down fall.", width/2,height/2-20);
+  fill("cyan");
+  text("You can also jump on top of ground monsters to kill them.", width/2,height-200);
  }
 }
 
@@ -289,8 +290,10 @@ function handleMonsters() {
 
 function gameOver(){
   plr.destroy();
-  bgS.stop();
-  dS.play();
+  bgS.pause();
+  if(!dS.isPlaying()){
+    dS.play();
+  }
   
   swal(
     {
